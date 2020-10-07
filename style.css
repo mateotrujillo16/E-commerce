@@ -92,7 +92,6 @@ nav a {
     animation-name: slides;
     animation-duration: 15s;
     animation-iteration-count: infinite;
-    object-fit: cover;
 }
 
 @keyframes slides {
@@ -100,6 +99,7 @@ nav a {
         background-image: url(https://i1.wp.com/www.omnomnomad.com/wp-content/uploads/2016/01/DSC_0003.jpg?fit=3872%2C2592);
         width: 100%;
         background-size: cover;
+        background-position: center;
     }
 
     50% {
@@ -112,6 +112,7 @@ nav a {
         background-image: url(https://i.redd.it/ehzeluvw27p31.jpg);
         width: 100%;
         background-size: cover;
+        background-position: center;
     }
 }
 
@@ -309,6 +310,10 @@ footer p {
 @media (min-width: 1000px) {
     .product-container {
         grid-template-columns: repeat(4, 1fr);
+    }
+    .slideshow {
+        width: 100vw;
+        height: 90vh;
     }
 
 }
