@@ -1,0 +1,314 @@
+body html {
+    text-decoration: none;
+    max-width: 100%;
+    height: 100%;
+    text-decoration-line: none;
+    list-style: none;
+    margin: 0;
+    min-height: 100%;
+    position: relative;
+}
+
+/* HEADER */
+
+.header {
+    width: 100%;
+    height: 85px;
+    background-color: white;
+}
+
+.inner-header {
+    width: 90%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+nav {
+    overflow: hidden;
+    font-family: 'Didact Gothic', sans-serif;
+    display: flex;
+    float: right;
+}
+
+.links {
+    display: flex;
+    list-style: none;
+}
+
+nav li a {
+    text-decoration: none;
+}
+
+nav a {
+    font-size: 20px;
+    padding: 15px 15px;
+    vertical-align: middle;
+    color: #D41159;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+}
+
+.items h1 {
+    text-align: center;
+    border-radius: 2em;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    color: #D41159;
+}
+
+.items h2 {
+    text-align: center;
+    border-radius: 2em;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.logo {
+    height: 100%;
+    display: table;
+    float: left;
+}
+
+.logo img {
+    height: 80px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* HERO */
+
+.slideshow {
+    margin-bottom: 2em;
+    width: 100vw;
+    height: 90vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: slides;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    object-fit: cover;
+}
+
+@keyframes slides {
+    25% {
+        background-image: url(https://i1.wp.com/www.omnomnomad.com/wp-content/uploads/2016/01/DSC_0003.jpg?fit=3872%2C2592);
+        width: 100%;
+        background-size: cover;
+    }
+
+    50% {
+        background-image: url(https://vid.alarabiya.net/images/2017/05/09/8d04b513-1b44-4d49-ad19-3cc64f4f5b3e/8d04b513-1b44-4d49-ad19-3cc64f4f5b3e.jpg);
+        width: 100%;
+        background-size: cover;
+    }
+
+    100% {
+        background-image: url(https://i.redd.it/ehzeluvw27p31.jpg);
+        width: 100%;
+        background-size: cover;
+    }
+}
+
+/* PRODUCTS */
+
+.product-container {
+    padding: 3em;
+    display: grid;
+    grid-gap: 2em;
+    font-family: 'Didact Gothic', sans-serif;
+    text-align: center;
+}
+
+.products {
+    padding: 2em;
+    border-radius: .3em;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.products img {
+    display: block;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.title {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+input [type="submit"] {
+    margin-top: 15px;
+}
+
+input [type="submit"] :hover {
+    background-color: #D41159;
+    color: white;
+    cursor: pointer;
+}
+
+/* CONTACT */
+
+form {
+    padding: 5%;
+    vertical-align: middle;
+    text-align: center;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.contact {
+    display: block;
+    padding: 10px;
+    border: none;
+}
+
+.contact label {
+    display: block;
+}
+
+.contact input {
+    height: 20px;
+    width: 25%;
+}
+
+.contact textarea {
+    height: 100px;
+    width: 25%;
+}
+
+/* FOOTER */
+
+.page-footer {
+    width: 100%;
+    height: 85px;
+    bottom: 0;
+    background-color: #D41159;
+}
+
+.inner-footer {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    color: white;
+    display: table;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.inner-footer a {
+    color: white;
+    display: inline-block;
+}
+
+i {
+    font-size: 17px;
+    text-align: center;
+    padding: 0px 6px;
+    display: inline-block;
+}
+
+.logo {
+    height: 100%;
+    display: table;
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.logo img {
+    height: 70px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+i:hover {
+    color: red;
+}
+
+footer p {
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 550px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 10px 10px;
+        vertical-align: middle;
+        color: #D41159;
+        font-weight: 400;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .logo img {
+        height: 50px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .slideshow {
+        width: 100vw;
+        height: 75vh;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .product-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    nav a {
+        font-size: 15px;
+        padding: 10px 10px;
+        vertical-align: middle;
+        color: #D41159;
+        font-weight: 400;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .logo img {
+        height: 60px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .slideshow {
+        width: 100vw;
+        height: 75vh;
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+    .product-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .slideshow {
+        width: 100vw;
+        height: 75vh;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    .product-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
