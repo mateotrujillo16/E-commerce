@@ -42,7 +42,7 @@ nav li a {
 }
 
 nav a {
-    font-size: 20px;
+    font-size: 25px;
     padding: 15px 15px;
     vertical-align: middle;
     color: #D41159;
@@ -162,6 +162,7 @@ form {
     vertical-align: middle;
     text-align: center;
     font-family: 'Didact Gothic', sans-serif;
+    bottom: 0;
 }
 
 .contact {
@@ -240,13 +241,13 @@ footer p {
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 550px) {
+@media screen and (min-width: 500px) {
     .product-container {
         grid-template-columns: repeat(2, 1fr);
     }
 
     nav a {
-        font-size: 14px;
+        font-size: 12px;
         padding: 10px 10px;
         vertical-align: middle;
         color: #D41159;
@@ -269,11 +270,11 @@ footer p {
 
 @media screen and (max-width: 800px) {
     .product-container {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     nav a {
-        font-size: 15px;
+        font-size: 14px;
         padding: 10px 10px;
         vertical-align: middle;
         color: #D41159;
@@ -283,31 +284,37 @@ footer p {
     }
 
     .logo img {
-        height: 60px;
+        height: 50px;
         display: table-cell;
         vertical-align: middle;
     }
 
     .slideshow {
         width: 100vw;
-        height: 75vh;
+        height: 55vh;
     }
 
 }
 
 @media screen and (min-width: 800px) {
-    .product-container {
-        grid-template-columns: repeat(3, 1fr);
+    nav a {
+        font-size: 25px;
+        padding: 10px 10px;
+        vertical-align: middle;
+        color: #D41159;
+        font-weight: 400;
+        text-decoration: none;
+        text-align: center;
     }
 
     .slideshow {
         width: 100vw;
-        height: 75vh;
+        height: 80vh;
     }
 
 }
 
-@media (min-width: 1000px) {
+ @media (min-width: 1000px) {
     .product-container {
         grid-template-columns: repeat(4, 1fr);
     }
